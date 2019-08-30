@@ -1,3 +1,6 @@
 #!/bin/sh
 
-ssserver -p 443 -k ${password} -m ${m} > /dev/null
+echo "password:" ${PASSWORD}
+echo "m:" ${M}
+
+ssserver -p 443 -k ${PASSWORD} -m ${M} -vv
