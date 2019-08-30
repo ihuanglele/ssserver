@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 LABEL maintainer = "ihuanglele"
-RUN apt-get update && apt-get install -y python-pip && pip install shadowsocks
+RUN apt-get update && apt-get install -y python-pip && pip install -y shadowsocks
 WORKDIR /home/shadowsocks
 ENV PASSWORD gxfchbnl
 ENV M aes-256-cfb
