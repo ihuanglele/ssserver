@@ -2,9 +2,8 @@ FROM alpine:3.4
 LABEL maintainer = "ihuanglele"
 ENV TIME_ZONE Asia/Shanghai
 RUN echo "https://mirror.tuna.tsinghua.edu.cn/alpine/v3.4/main" > /etc/apk/repositories
-RUN apk add --update bash python py-pip \
-  && pip install --no-cache-dir shadowsocks \
-  && rm -rf /var/cache/apk/* 
+RUN apk add --no-cache --update bash python py-pip \
+  && pip install --no-cache-dir shadowsocks
 
 WORKDIR /home/shadowsocks
 ENV PASSWORD gxfchbnl
